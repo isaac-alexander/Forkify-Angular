@@ -1,0 +1,31 @@
+.shopping {
+  padding: 3rem 4rem 4rem 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.shopping_list {
+  list-style: none;
+  max-height: 97rem;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.shopping_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 0;
+  border-bottom: 1px solid #F2EFEE;
+  font-size: 1.4rem;
+}
+
+.shopping_delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #c0392b;
+  font-size: 1.6rem;
+}

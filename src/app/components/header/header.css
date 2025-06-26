@@ -1,0 +1,68 @@
+.header {
+  grid-area: head;
+  background-color: #F9F5F3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_logo {
+  margin-left: 4rem;
+  height: 4.5rem;
+  display: block;
+}
+
+.search {
+  background-color: #fff;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  padding-left: 3rem;
+  margin-right: 5.8rem;
+  transition: all 0.3s;
+}
+
+.search_field {
+  border: none;
+  background: none;
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.7rem;
+  width: 30rem;
+  display: block;
+  outline: none;
+}
+
+.likes {
+  align-self: stretch;
+  padding: 0 !important;
+}
+
+.likes_field {
+  cursor: pointer;
+  padding: 0 4rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.likes_icon {
+  fill: #a83232bb;
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.likes_panel {
+  position: absolute;
+  right: 0;
+  top: 10rem;
+  z-index: 10;
+  padding: 2rem 0;
+  width: 34rem;
+  background-color: #fff;
+  box-shadow: 0 0.8rem 5rem 2rem rgba(101, 90, 86, 0.1);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s 0.2s;
+}

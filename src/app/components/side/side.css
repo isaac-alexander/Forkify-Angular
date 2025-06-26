@@ -1,0 +1,52 @@
+.results {
+  padding: 2.5rem 0;
+  position: relative;
+}
+
+.results_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.results_pages {
+  margin-top: 3rem;
+  padding: 0 3rem;
+}
+
+.preview {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #f2efee;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.preview:hover {
+  background-color: #f9f5f3;
+}
+
+.preview__image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+
+.preview__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.preview__title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #d38212;
+}
+
+.preview__publisher {
+  font-size: 1.2rem;
+  color: #999;
+}

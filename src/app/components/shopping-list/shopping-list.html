@@ -1,0 +1,17 @@
+<div class="shopping">
+  <h2 class="heading-2">My Shopping List</h2>
+  <ul class="shopping_list">
+     <li class="shopping_item" *ngFor="let item of items; index as i">
+    {{ item }}
+    <button class="shopping_delete" (click)="remove(i)">
+      <i class="fa-solid fa-trash-can"></i>
+    </button>
+  </li>
+  </ul>
+  <div class="copyright">
+    ©️2020 by Soumya Dey.
+    <br />
+    Powered by
+    <a href="https://forkify-api.herokuapp.com/" target="_blank" class="link">forkify-api.herokuapp.com</a>.
+  </div>
+</div>
