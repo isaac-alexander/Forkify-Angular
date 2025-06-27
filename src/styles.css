@@ -1,47 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  color: rgb(101, 90, 86);
   background: linear-gradient(to right bottom, #d38312d8, #a83279d8);
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: calc(100vh - 2 * 4vw);
-  padding: 0;
-  margin: 0;
-  box-sizing: inherit;
-  display: block;
-}
-
-.container {
-  max-width: 120rem;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 2rem 6rem 0.5rem rgba(101, 90, 86, 0.2);
-  display: grid;
-  grid-template-rows: 10rem minmax(100rem, auto);
-  grid-template-columns: 1.1fr 2fr 1.1fr;
-  grid-template-areas:
-    "head head head"
-    "list recipe shopping";
-}
-
-@media only screen and (max-width: 68.75em) {
-  .container {
-    width: 100%;
-    margin: 0;
-    border-radius: 0;
-  }
-
-  html {
-    font-size: 50%;
-  }
+  min-height: 100vh;
+  color: #654a3a;
 }
 
 .btn {
-  padding: 1.3rem 3rem;
+  padding: 1.2rem 2.4rem;
   font-size: 1.4rem;
   background: linear-gradient(to right bottom, #b47722, #8b386a);
   border-radius: 10rem;
@@ -49,55 +32,16 @@ body {
   text-transform: uppercase;
   color: #fff;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  transition: all 0.2s, transform 0.1s;
+  gap: 1rem;
+  transition: background 0.3s ease;
 }
 
-.btn> :first-child,
-.btn-small> :first-child {
-  margin-right: 1rem;
-}
-
-.btn--small {
-  font-size: 1.2rem;
-  padding: 0.8rem 2rem;
-  margin: 1rem auto;
-  display: flex;
-  align-items: center;
-}
-
-.search_btn,
-.btn--small:hover,
-.btn-like,
-.recipe__btn:hover {
+.btn:hover {
   background: linear-gradient(to right bottom, #a83279, #d38312);
 }
 
-.copyright {
-  color: #968B87;
-  font-size: 1.2rem;
-  margin-top: auto;
-}
-
-.message {
-  padding: 2rem;
-  font-size: 50px;
-  color: #d38212;
-  text-align: center;
-  animation: spin 3s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.message-failed {
-  padding: 2rem;
-  font-size: 20px;
-  color: #d38212;
-  text-align: center;
-  animation: 3s linear infinite;
+.search__icon {
+  font-size: 1.4rem;
 }
