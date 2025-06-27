@@ -1,16 +1,28 @@
 .shopping {
-  padding: 3rem 4rem 4rem 4rem;
+  padding: 3rem 2rem 4rem;
+  background-color: #fffdfc;
+  overflow-y: auto;
+  max-height: calc(100vh - 12rem);
   display: flex;
   flex-direction: column;
+  border-left: 1px solid #eee;
+}
+
+.heading-2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #d38212;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .shopping_list {
   list-style: none;
-  max-height: 97rem;
-  overflow: hidden;
-  position: relative;
   padding: 0;
   margin: 0;
+  flex-grow: 1;
+  overflow-y: auto;
 }
 
 .shopping_item {
@@ -18,8 +30,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.3rem 0;
-  border-bottom: 1px solid #F2EFEE;
+  border-bottom: 1px solid #f2efee;
   font-size: 1.4rem;
+  color: #333;
 }
 
 .shopping_delete {
@@ -28,4 +41,11 @@
   cursor: pointer;
   color: #c0392b;
   font-size: 1.6rem;
+}
+
+.copyright {
+  color: #968b87;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  text-align: center;
 }
