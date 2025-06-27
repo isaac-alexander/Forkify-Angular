@@ -1,15 +1,21 @@
 <div class="container">
   <header class="header">
-<app-header (search)="onSearch($event)"></app-header>
+    <app-header (search)="onSearch($event)"></app-header>
   </header>
 
   <div class="results">
-    <app-side [recipes]="recipes"></app-side>
+    <app-side
+      [recipes]="recipes"
+      (recipeSelected)="onRecipeSelect($event)">
+    </app-side>
   </div>
 
-  <app-main></app-main>
+  <app-main
+    [recipeId]="selectedRecipeId"
+    (sendIngredients)="onAddToShoppingList($event)">
+  </app-main>
 
   <div class="shopping">
-<app-shopping-list></app-shopping-list>
+    <app-shopping-list [newIngredients]="ingredients"></app-shopping-list>
   </div>
 </div>
