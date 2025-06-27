@@ -19,7 +19,12 @@ import { ShoppingList } from './components/shopping-list/shopping-list';
   styleUrls: ['./app.css'],
 })
 export class App {
+onSelectRecipe($event: Event) {
+throw new Error('Method not implemented.');
+}
   recipes: any[] = [];
+  selectedRecipeId: string = '';
+  ingredients: string[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -34,5 +39,13 @@ export class App {
           console.error('Search error:', err);
         },
       });
+  }
+
+  onRecipeSelect(id: string) {
+    this.selectedRecipeId = id;
+  }
+
+  onAddToShoppingList(ings: string[]) {
+    this.ingredients = ings;
   }
 }
