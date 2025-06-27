@@ -1,10 +1,10 @@
 .recipe {
-  background-color: #F9F5F3;
-  border-top: 1px solid #fff;
-}
-
-.recipe__details {
+  background-color: #f9f5f3;
   padding: 3rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 12rem);
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
 }
 
 .recipe__img {
@@ -16,49 +16,36 @@
 }
 
 .recipe__title {
-  color: #a83279d8;
+  color: #a83279;
   font-weight: 700;
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
-  line-height: 1.95;
+  line-height: 1.4;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .recipe__publisher {
   font-size: 1.6rem;
   text-align: center;
   color: #555;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .recipe__ingredients {
-  background-color: #F2EFEE;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #f2efee;
   list-style: none;
-  margin-top: 2rem;
   padding: 0;
+  margin: 2rem 0;
+  border-radius: 5px;
 }
 
 .ingredient {
   padding: 1rem;
-  background-color: #f9f5f3;
+  background-color: #fff;
   border-bottom: 1px solid #e0dcd9;
-  font-size: 1.5rem;
-  width: 100%;
+  font-size: 1.4rem;
   text-align: center;
-}
-
-.recipe__directions {
-  margin-top: 3rem;
-  text-align: center;
-}
-
-.recipe__directions-text {
-  font-size: 1.6rem;
-  margin-bottom: 2rem;
-  color: #555;
 }
 
 .recipe__btn {
@@ -69,12 +56,23 @@
   border: none;
   color: #fff;
   cursor: pointer;
-  text-decoration: none;
-  display: inline-flex;
+  margin: 2rem auto;
+  display: flex;
   align-items: center;
+  justify-content: center;
   transition: 0.3s;
 }
 
 .recipe__btn i {
   margin-left: 0.5rem;
+}
+
+.recipe__directions {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.recipe__directions-text {
+  font-size: 1.6rem;
+  color: #555;
 }
