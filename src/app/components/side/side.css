@@ -1,6 +1,8 @@
 .results {
-  padding: 2.5rem 0;
-  position: relative;
+  padding: 2rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 12rem);
+  background-color: #fff;
 }
 
 .results_list {
@@ -9,18 +11,13 @@
   margin: 0;
 }
 
-.results_pages {
-  margin-top: 3rem;
-  padding: 0 3rem;
-}
-
 .preview {
   display: flex;
   align-items: center;
   padding: 1.5rem;
   border-bottom: 1px solid #f2efee;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .preview:hover {
