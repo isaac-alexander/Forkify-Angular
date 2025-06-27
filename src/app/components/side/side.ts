@@ -1,6 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 
 @Component({
   standalone: true,
@@ -10,11 +9,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './side.css'
 })
 export class Side {
-results: any;
-selectRecipe(arg0: any) {
-throw new Error();
-}
-    @Input() recipes: any[] = [];
-recipe: any;
+  @Input() recipes: any[] = [];
+  @Output() recipeSelected = new EventEmitter<string>();
 
+  selectRecipe(id: string) {
+    this.recipeSelected.emit(id);
+  }
 }
