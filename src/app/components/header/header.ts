@@ -5,17 +5,18 @@ import { FormsModule } from '@angular/forms';
 @Component({
   standalone: true,
   selector: 'app-header',
-  imports: [ CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './header.html',
-  styleUrl: './header.css'
+  styleUrl: './header.css',
 })
 export class Header {
- query: string = '';
+  searchTerm: string = '';
 
   @Output() search = new EventEmitter<string>();
-searchTerm: any;
 
   onSearch() {
-    this.search.emit(this.query.trim());
+    if (this.searchTerm.trim()) {
+      this.search.emit(this.searchTerm);
+    }
   }
 }
