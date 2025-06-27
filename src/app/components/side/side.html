@@ -1,6 +1,11 @@
 <ul class="results_list">
-  <li *ngFor="let recipe of recipes" class="preview">
+  <li
+    *ngFor="let recipe of recipes"
+    class="preview"
+    (click)="selectRecipe(recipe.recipe_id)">
+    
     <img [src]="recipe.image_url" class="preview__image" />
+    
     <div class="preview__info">
       <h4 class="preview__title">{{ recipe.title }}</h4>
       <p class="preview__publisher">{{ recipe.publisher }}</p>
