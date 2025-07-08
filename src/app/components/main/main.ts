@@ -1,6 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { Recipe } from '../../recipe.model';
 
 @Component({
   standalone: true,
@@ -10,20 +11,28 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
   styleUrl: './main.css'
 })
 export class Main {
-@Input() recipeId: string = '';
+  @Input() recipeId: string = '';
   @Output() sendIngredients = new EventEmitter<string[]>();
-  recipe: any = null;
+  recipe: Recipe | null = null;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  async ngOnChanges() {
+  ngOnChanges() {
     if (!this.recipeId) return;
 
-    const res: any = await this.http
-      .get(`https://forkify-api.herokuapp.com/api/get?rId=${this.recipeId}`)
-      .toPromise();
+    this.http
+      .get<{ recipe: Recipe }>(`https://forkify-api.herokuapp.com/api/get?rId=${this.recipeId}`)
+      .subscribe(
+        {
+          next: res => {
+            this.recipe = res.recipe;
+          },
+          error: err => {
+            console.error('Search error:', err);
+          },
+        }
+      );
 
-    this.recipe = res.recipe;
   }
 
   addToShoppingList() {
