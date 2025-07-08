@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './header.css',
 })
 export class Header {
+  imgUrl = 'https://forkify-your-recipe.netlify.app/img/logo.svg';
   searchTerm: string = '';
 
   @Output() search = new EventEmitter<string>();
