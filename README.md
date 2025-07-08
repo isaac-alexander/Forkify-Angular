@@ -1,59 +1,44 @@
-# Forkify
+# Angular Forkify
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
+An Angular application that allows users to search for recipes, view recipe details, and manage a shopping list using the [Forkify API](https://forkify-api.herokuapp.com).
 
-## Development server
+## Features
 
-To start a local development server, run:
+- Live search for recipes
+- View recipe details (title, image, publisher, ingredients)
+- Add ingredients to a shopping list
+- Remove items from the shopping list
+-  Fully responsive 3-column layout
+
+---
+
+- **Angular** (Standalone Components)
+- **TypeScript**
+- **HTML & CSS (Responsive Grid Layout)**
+- **Forkify API** for live recipe data
+
+
+## Layout
+
+- `Header`: Centered logo and search input
+- `Side`: Search results
+- `Main`: Recipe details
+- `Shopping List`: Added ingredients
+
+## Getting Started
+
+To run this project locally:
 
 ```bash
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Then visit `http://localhost:4200/`
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+<p align="center">
+    <img src="\src\assets\Screenshot (75).png" width="350" title="On Load">
+    <img src="\src\assets\Screenshot (76).png" width="350" title="View after search">
+    <img src="\src\assets\Screenshot (77).png" width="350" title="Main Component">
+    <img src="\src\assets\Screenshot (78).png" width="350" title="Cart View">
+</p>
