@@ -4,6 +4,7 @@ import { Header } from './components/header/header';
 import { Side } from './components/side/side';
 import { Main } from './components/main/main';
 import { ShoppingList } from './components/shopping-list/shopping-list';
+import { Recipe } from './recipe.model';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,7 @@ export class App {
 onSelectRecipe($event: Event) {
 throw new Error('Method not implemented.');
 }
-  recipes: any[] = [];
+  recipes: Recipe[] = [];
   selectedRecipeId: string = '';
   ingredients: string[] = [];
 
@@ -30,7 +31,7 @@ throw new Error('Method not implemented.');
 
   onSearch(query: string) {
     this.http
-      .get<any>(`https://forkify-api.herokuapp.com/api/search?q=${query}`)
+      .get<{ count: Number, recipes: Recipe[]}>(`https://forkify-api.herokuapp.com/api/search?q=${query}`)
       .subscribe({
         next: res => {
           this.recipes = res.recipes;
