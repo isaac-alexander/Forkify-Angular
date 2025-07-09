@@ -1,23 +1,26 @@
-<div *ngIf="recipe" class="recipe__details">
-  <img [src]="recipe.image_url" class="recipe__img" />
-  <h1 class="recipe__title">{{ recipe.title }}</h1>
-  <p class="recipe__publisher">By {{ recipe.publisher }}</p>
+<div class="recipe">
+  <div *ngIf="recipe" class="recipe__details">
+    <img [src]="recipe.image_url" class="recipe__img" />
+    <h1 class="recipe__title">{{ recipe.title }}</h1>
+    <p class="recipe__publisher">By {{ recipe.publisher }}</p>
 
-  <ul class="recipe__ingredients">
-    <li class="ingredient" *ngFor="let ing of recipe.ingredients">
-      {{ ing }}
-    </li>
-  </ul>
+    <ul class="recipe__ingredients">
+      <li class="ingredient" *ngFor="let ing of recipe.ingredients">
+        {{ ing }}
+      </li>
+    </ul>
 
-<button class="btn--small recipe__btn" (click)="addToShoppingList()">
-  <i class="fa-solid fa-cart-plus"></i>&nbsp; Add to Shopping List
-</button>
+    <button class="btn--small recipe__btn" (click)="addToShoppingList()">
+      <i class="fa-solid fa-cart-plus"></i>&nbsp; Add to Shopping List
+    </button>
 
 
-  <div class="recipe__directions">
-    <p class="recipe__directions-text">
-      Find directions on
-      <a [href]="recipe.source_url" target="_blank">{{ recipe.publisher }}</a>
-    </p>
+    <div class="recipe__directions">
+      <p class="recipe__directions-text">
+        Find directions on
+        <a [href]="recipe.source_url" target="_blank">{{ recipe.publisher }}</a>
+      </p>
+    </div>
   </div>
+
 </div>
