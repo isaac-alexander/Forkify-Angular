@@ -1,6 +1,7 @@
 <header class="header">
   <img [src]="imgUrl" alt="Forkify Logo" class="header_logo" />
 
+  <div></div>
   <form class="search" (submit)="onSearch()">
     <input type="text" class="search_field" placeholder="Search over 1,000,000 recipes..." [(ngModel)]="searchTerm"
       name="searchTerm" />
