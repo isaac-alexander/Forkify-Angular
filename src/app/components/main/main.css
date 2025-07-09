@@ -1,7 +1,9 @@
 .recipe {
+  grid-area: recipe;
   background-color: #f9f5f3;
   padding: 3rem;
   overflow-y: auto;
+  height: 100%;
   max-height: calc(100vh - 12rem);
   border-left: 1px solid #eee;
   border-right: 1px solid #eee;
@@ -16,9 +18,9 @@
 }
 
 .recipe__title {
-  color: #a83279;
+  color: #b47722;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   text-transform: uppercase;
   line-height: 1.4;
   text-align: center;
