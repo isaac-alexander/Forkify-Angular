@@ -2,7 +2,7 @@
   padding: 3rem 2rem 4rem;
   background-color: #fffdfc;
   overflow-y: auto;
-  max-height: calc(100vh - 12rem);
+  height: calc(100vh - 12rem);
   display: flex;
   flex-direction: column;
   border-left: 1px solid #eee;
@@ -21,7 +21,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  flex-grow: 1;
+  flex-grow: 0;
   overflow-y: auto;
 }
 
@@ -46,6 +46,8 @@
 .copyright {
   color: #968b87;
   font-size: 1.2rem;
-  margin-top: 2rem;
+  margin-top: auto;
   text-align: center;
+  padding-top: 2rem;
 }
+
