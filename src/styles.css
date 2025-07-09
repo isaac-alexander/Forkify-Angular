@@ -45,3 +45,8 @@ body {
 .search__icon {
   font-size: 1.4rem;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
